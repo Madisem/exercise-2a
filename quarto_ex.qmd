@@ -1,0 +1,39 @@
+---
+title: "notes_qr"
+author: "Madina"
+format: html
+editor: visual
+---
+
+## Notes
+
+This page dedicated for explaning every step of the code! Have a carefull look and repeat them!
+
+## Running Code
+
+```{r}
+1 + 1
+x <- 6
+y <- 8
+z <- x+y
+print (z)
+
+```
+
+You can add options to executable code like this
+
+```{r}
+#| warning: false
+library(tidyverse)
+d <- read_csv("/Users/madinaseidualy/Desktop/Data_Analyses/data-wrangling.csv",col_names = TRUE)
+#extracted_col<-paste(d$Body_mass_female_mean,d$Bod)
+
+fbm<-d$Body_mass_female_mean
+fbz<-d$Brain_Size_Species_Mean
+mean(fbm, na.rm = TRUE)
+mean(fbz, na.rm = TRUE)
+plot(fbm,fbz)
+plot(log(fbm),log(fbz))
+plot(log(fbz),log(fbm))
+
+```
